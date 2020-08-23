@@ -2,8 +2,6 @@
 
 Covid-19 is the world treat now and a days and I want to visualize what looks like the spread and other relateed things. 
 ### Introduction
-
-# Covid-19-Preprocessed-Dataset
 Latest Covid-19 Dataset
 
 Coronavirus disease 2019 (COVID-19) time series listing confirmed cases, reported deaths and reported recoveries. Data is disaggregated by country (and sometimes subregion). Coronavirus disease (COVID-19) is caused by the [Severe acute respiratory syndrome Coronavirus 2 (SARS-CoV-2)][sars2] and has had a worldwide effect. On March 11 2020, the World Health Organization (WHO) declared it a pandemic, pointing to the over 118,000 cases of the coronavirus illness in over 110 countries and territories around the world at the time.
@@ -17,55 +15,7 @@ This dataset includes time series data tracking the number of people affected by
 * the number of people who have reportedly died while sick with Coronavirus
 * the number of people who have reportedly recovered from it
 
-# Sample Code
-
-This is sample code by using you can get started working with this dataset.
-
-```
-# import
-# imports
-import plotly.express as px
-import plotly.graph_objects as go
-import plotly.figure_factory as ff
-from plotly.subplots import make_subplots
-
-import folium
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-%matplotlib inline
-
-import math
-import random
-from datetime import timedelta
-import warnings
-warnings.filterwarnings('ignore')
-
-#color pallette
-cnf = '#393e46'
-dth = '#ff2e63'
-rec = '#21bf73'
-act = '#fe9801'
-```
-
-Let's code
-```
-# load the dataset
-df = pd.read_csv('Covid-19-Preprocessed-Dataset/preprocessed/covid_19_data_cleaned.csv', parse_dates=['Date'])
-
-country_daywise = pd.read_csv('Covid-19-Preprocessed-Dataset/preprocessed/country_daywise.csv', parse_dates=['Date'])
-countywise = pd.read_csv('Covid-19-Preprocessed-Dataset/preprocessed/countrywise.csv')
-daywise = pd.read_csv('Covid-19-Preprocessed-Dataset/preprocessed/daywise.csv', parse_dates=['Date'])
-
-# fill NA
-df['Province/State'] = df['Province/State'].fillna("")
-# grouping by date
-confirmed = df.groupby('Date').sum()['Confirmed'].reset_index()
-recovered = df.groupby('Date').sum()['Recovered'].reset_index()
-deaths = df.groupby('Date').sum()['Deaths'].reset_index()
-
-
-## Data
+##### Data
 
 Data is in CSV format and updated daily. It is sourced from [this upstream repository](https://github.com/CSSEGISandData/COVID-19) maintained by the amazing team at [Johns Hopkins University Center for Systems Science and Engineering](https://systems.jhu.edu/) (CSSE) who have been doing a great public service from an early point by collating data from around the world.
 
