@@ -15,7 +15,14 @@ This dataset includes time series data tracking the number of people affected by
 * the number of people who have reportedly died while sick with Coronavirus
 * the number of people who have reportedly recovered from it
 
-##### Data
+
+
+### Objectives
+
+### Motivations
+
+
+### Data
 
 Data is in CSV format and updated daily. It is sourced from [this upstream repository](https://github.com/CSSEGISandData/COVID-19) maintained by the amazing team at [Johns Hopkins University Center for Systems Science and Engineering](https://systems.jhu.edu/) (CSSE) who have been doing a great public service from an early point by collating data from around the world.
 
@@ -38,11 +45,5 @@ The upstream dataset currently lists the following upstream datasources:
 - Ministry of Health Singapore (MOH): https://www.moh.gov.sg/covid-19
 - Italy Ministry of Health: http://www.salute.gov.it/nuovocoronavirus
 
-
-### Objectives
-
-### Motivations
-
-### Reference
 
 ### Next work
